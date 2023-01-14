@@ -1,12 +1,9 @@
-DOCKER_NAME	:=	test
-
 SRCS		:=	./srcs/
 
 DOCKER_FILES	:= $(shell docker ps -a -q)
 DOCKER_IMAGES	:= $(shell docker images -aq)
 
 compose:
-	#cd ./srcs && docker compose build --no-cache
 	cd ./srcs && docker compose up
 
 rm:	
